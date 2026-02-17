@@ -32,4 +32,4 @@ O desde Eclipse: File → Import → Git → Projects from Git → Clone URI
 ## Autor
 
 **Isabel Jardón**  
-Profesora de Desarrollo de Aplicaciones 
+Profesora del Módulo Desarrollo de Interfaces
