@@ -28,3 +28,8 @@ O desde Eclipse: File → Import → Git → Projects from Git → Clone URI
 
 - El alumnado **puede clonar** el repositorio libremente.
 - El alumnado **no puede hacer push** (no tiene permisos).
+
+## Autor
+
+**Isabel Jardón**  
+Profesora de Desarrollo de Aplicaciones 
