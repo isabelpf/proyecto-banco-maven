@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="listaclientes"
+	xmlns="http://javafx.com/javafx/23.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.miempresa.controller.ListaClientesController">
+	<top>
+		<Label text="Listado de Clientes" BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="10.0" />
+			</BorderPane.margin>
+		</Label>
+	</top>
+	<center>
+		<TableView fx:id="tablaClientes" prefHeight="212.0"
+			prefWidth="387.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+				<TableColumn fx:id="colApellido" prefWidth="75.0" text="Apellidos" />
+				<TableColumn fx:id="colEmail" prefWidth="123" text="email" />
+				<TableColumn fx:id="colTelefono" prefWidth="110" text="teléfono" />
+			</columns>
+		</TableView>
+	</center>
+	<padding>
+		<Insets top="20.0" />
+	</padding>
+</BorderPane>

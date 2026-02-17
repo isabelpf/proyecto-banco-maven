@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Label, TextField, PasswordField, RadioButton -->
+<!-- BorderPane, VBox, HBox, GridPane -->
+<!-- Insets -->
+<!-- Font -->
+
+<BorderPane prefHeight="490.0" prefWidth="616.0"
+	xmlns="http://javafx.com/javafx/23.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.miempresa.controller.ClienteController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Close" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Delete" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+
+	<center>
+		<VBox spacing="30.0">
+
+			<GridPane hgap="10" prefHeight="128.0" prefWidth="616.0"
+				vgap="10">
+				<Label text="Nombre:" GridPane.columnIndex="0"
+					GridPane.rowIndex="1" />
+				<TextField fx:id="txtNombre" promptText="Nombre"
+					GridPane.columnIndex="1" GridPane.columnSpan="2"
+					GridPane.rowIndex="1" />
+				<Label text="Email:" GridPane.columnIndex="0"
+					GridPane.rowIndex="2" />
+				<TextField fx:id="txtEmail" promptText="email"
+					GridPane.columnIndex="1" GridPane.columnSpan="2"
+					GridPane.rowIndex="2" />
+				<Label text="Rol" GridPane.rowIndex="3" />
+				<RadioButton fx:id="rbArtista" text="Artista"
+					GridPane.columnIndex="1" GridPane.rowIndex="3">
+					<toggleGroup>
+						<ToggleGroup fx:id="rol" />
+					</toggleGroup>
+				</RadioButton>
+				<RadioButton fx:id="rbCoord" text="Coordinador"
+					toggleGroup="$rol" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+				<!-- Datos comunes -->
+				<Label alignment="CENTER" contentDisplay="CENTER"
+					style="-fx-font-size: 16px; -fx-font-weight: bold;"
+					text="Datos del usuario" textAlignment="CENTER"
+					GridPane.columnIndex="1" />
+				<columnConstraints>
+					<ColumnConstraints />
+					<ColumnConstraints />
+					<ColumnConstraints />
+				</columnConstraints>
+				<rowConstraints>
+					<RowConstraints minHeight="10.0" prefHeight="30.0" />
+					<RowConstraints />
+					<RowConstraints />
+					<RowConstraints minHeight="10.0" prefHeight="30.0" />
+				</rowConstraints>
+				<VBox.margin>
+					<Insets />
+				</VBox.margin>
+				<padding>
+					<Insets left="20.0" />
+				</padding>
+			</GridPane>
+
+			<!-- Rol -->
+
+			<HBox spacing="20" />
+
+			<!-- Paneles dinámicos -->
+			<StackPane prefHeight="160.0" prefWidth="616.0">
+				<!-- Panel Artista -->
+				<VBox fx:id="panelArtista" prefHeight="94.0" prefWidth="544.0"
+					spacing="10.0">
+					<Label style="-fx-font-weight: bold;"
+						text="Datos del Artista" />
+					<TextField promptText="Apodo del artista" />
+					<Label text="Especialidad" />
+					<ListView prefHeight="86.0" prefWidth="576.0" />
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<StackPane.margin>
+						<Insets />
+					</StackPane.margin>
+					<padding>
+						<Insets left="20.0" right="20.0" />
+					</padding>
+				</VBox>
+
+				<!-- Panel Coordinador -->
+				<VBox fx:id="panelCoord" prefHeight="135.0" prefWidth="616.0"
+					spacing="10">
+					<Label style="-fx-font-weight: bold;"
+						text="Datos de Coordinador" />
+					<TextField promptText="Nombre del Coordinador" />
+					<TextField promptText="Contraseña" />
+					<padding>
+						<Insets left="20.0" right="20.0" />
+					</padding>
+				</VBox>
+			</StackPane>
+			<padding>
+				<Insets top="20.0" />
+			</padding>
+
+		</VBox>
+
+	</center>
+
+</BorderPane>
